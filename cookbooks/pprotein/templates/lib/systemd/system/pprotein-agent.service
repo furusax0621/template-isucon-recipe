@@ -1,0 +1,12 @@
+[Unit]
+Description=pprotein-agent service
+
+[Service]
+ExecStart=/usr/share/pprotein/bin/pprotein-agent
+WorkingDirectory=/usr/share/pprotein
+Environment=PATH=$PATH:/usr/local/bin
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
