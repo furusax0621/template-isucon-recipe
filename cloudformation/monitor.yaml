@@ -116,7 +116,8 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
-          yum update -y
+          dnf update -y
+          dnf install -y git
           curl https://github.com/${GitHubName}.keys >> /home/ec2-user/.ssh/authorized_keys
       Tags:
         - Key: Name
